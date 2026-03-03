@@ -18,7 +18,9 @@ N -90 -430 -90 -390 {lab=#net4}
 N 90 -430 90 -390 {lab=#net4}
 N -90 -430 90 -430 {lab=#net4}
 N 0 -470 0 -430 {lab=#net4}
-N 90 -290 240 -290 {lab=#net2}
+N 90 -300 220 -300 {lab=#net2}
+N 220 -240 220 -210 {lab=#net5}
+N 0 -60 -0 -40 {lab=#net6}
 C {sky130_fd_pr/nfet_01v8.sym} -110 -230 0 0 {name=M1
 L=0.15
 W=1
@@ -89,3 +91,4 @@ sa=0 sb=0 sd=0
 model=nfet_01v8
 spiceprefix=X
 }
+C {sky130_fd_pr/cap_mim_m3_1.sym} 220 -270 0 0 {name=C1 model=cap_mim_m3_1 W=1 L=1 MF=1 spiceprefix=X}

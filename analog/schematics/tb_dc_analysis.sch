@@ -4,26 +4,26 @@ K {}
 V {}
 S {}
 E {}
-N 70 60 70 80 {lab=GND}
-N -250 40 -100 40 {lab=#net1}
-N -100 40 -40 40 {lab=#net1}
-N -160 -20 -100 -20 {lab=#net2}
-N -100 -20 -40 -20 {lab=#net2}
-N -40 -20 -40 -10 {lab=#net2}
-N -40 30 -40 40 {lab=#net1}
-N 210 10 230 10 {lab=test}
-C {bootcamp_opamp.sym} 110 10 0 0 {name=x1}
-C {devices/res.sym} -160 -50 0 0 {name=R1
+N 10 50 10 70 {lab=GND}
+N -330 30 -180 30 {lab=#net1}
+N -180 30 -120 30 {lab=#net1}
+N -240 -30 -180 -30 {lab=#net2}
+N -180 -30 -120 -30 {lab=#net2}
+N -120 -30 -120 -20 {lab=#net2}
+N -120 20 -120 30 {lab=#net1}
+N 180 0 200 0 {lab=test}
+C {bootcamp_opamp.sym} 30 0 0 0 {name=x1}
+C {devices/res.sym} -240 -60 0 0 {name=R1
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {devices/res.sym} -250 10 0 0 {name=R2
+C {devices/res.sym} -330 0 0 0 {name=R2
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {devices/code_shown.sym} -390 100 0 0 {name=s1 only_toplevel=false 
+C {devices/code_shown.sym} -400 80 0 0 {name=s1 only_toplevel=false 
 value="
 .dc VDIFF -10m 10m 0.1m
 .save all
@@ -36,12 +36,11 @@ C {devices/vdd.sym} -490 -80 0 0 {name=l4 lab=VDD}
 C {devices/gnd.sym} -490 -20 0 0 {name=l5 lab=GND}
 C {devices/vdd.sym} -490 60 0 0 {name=l6 lab=VCM
 }
-C {devices/vdd.sym} 70 -40 0 0 {name=l8 lab=VDD}
-C {devices/vdd.sym} -250 -20 0 0 {name=l9 lab=VCM
+C {devices/vdd.sym} 10 -50 0 0 {name=l8 lab=VDD}
+C {devices/vdd.sym} -330 -30 0 0 {name=l9 lab=VCM
 }
-C {devices/vdd.sym} -160 -80 0 0 {name=l10 lab=VCM
+C {devices/vdd.sym} -240 -90 0 0 {name=l10 lab=VCM
 }
-C {devices/gnd.sym} 70 80 0 0 {name=l7 lab=GND}
-C {devices/vsource.sym} -100 10 0 0 {name=VDIFF value=0 savecurrent=false}
-C {devices/ipin.sym} 230 10 0 1 {name=p3 lab=test
-}
+C {devices/gnd.sym} 10 70 0 0 {name=l7 lab=GND}
+C {devices/vsource.sym} -180 0 0 0 {name=VDIFF value=0 savecurrent=false}
+C {devices/ipin.sym} 200 0 0 1 {name=p3 lab=test}

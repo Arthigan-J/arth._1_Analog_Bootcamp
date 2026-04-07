@@ -26,8 +26,8 @@ VDIFF net2 net1 0
 **.ends
 
 * expanding   symbol:  bootcamp_opamp.sym # of pins=5
-** sym_path: /home/arthcodez/arth._1_Analog_Bootcamp/analog/symbols/bootcamp_opamp.sym
-** sch_path: /home/arthcodez/arth._1_Analog_Bootcamp/analog/symbols/bootcamp_opamp.sch
+** sym_path: /home/arthcodez/arth._1_Analog_Bootcamp/analog/schematics/bootcamp_opamp.sym
+** sch_path: /home/arthcodez/arth._1_Analog_Bootcamp/analog/schematics/bootcamp_opamp.sch
 .subckt bootcamp_opamp VDD VOUT VIN_N VIN_P VSS
 *.ipin VIN_P
 *.ipin VIN_N
@@ -48,7 +48,6 @@ XM6 VOUT VOUT VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) 
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM7 VOUT net3 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-C1 VOUT GND 1p m=1
 XM8 net3 net3 VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 R1 VDD net3 1k m=1

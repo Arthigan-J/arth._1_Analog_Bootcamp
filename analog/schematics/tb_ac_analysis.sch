@@ -4,41 +4,48 @@ K {}
 V {}
 S {}
 E {}
-N 60 -30 130 -30 {lab=#net1}
-N 60 30 130 30 {lab=#net2}
-N 10 -30 60 -30 {lab=#net1}
-N -80 30 60 30 {lab=#net2}
-N 330 0 360 0 {lab=VOUT}
-N 240 50 240 70 {lab=GND}
-C {bootcamp_opamp.sym} 270 0 0 0 {name=x1}
-C {devices/vsource.sym} 60 0 0 0 {name=VDIFF value="dc 0 ac 1" savecurrent=false}
-C {devices/res.sym} 10 -60 0 0 {name=R1
+N 250 80 250 100 {lab=GND}
+N 120 0 120 10 {lab=#net1}
+N 120 50 120 60 {lab=#net2}
+N 420 30 440 30 {lab=test}
+N 50 60 120 60 {lab=#net2}
+N 50 0 120 0 {lab=#net1}
+N 0 0 50 0 {lab=#net1}
+N -90 60 50 60 {lab=#net2}
+C {bootcamp_opamp.sym} 270 30 0 0 {name=x1}
+C {devices/res.sym} 0 -30 0 0 {name=R1
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {devices/res.sym} -80 0 0 0 {name=R2
+C {devices/res.sym} -90 30 0 0 {name=R2
 value=1M
 footprint=1206
 device=resistor
 m=1}
-C {devices/code_shown.sym} -140 140 0 0 {name=s1 only_toplevel=false 
+C {devices/code_shown.sym} -160 110 0 0 {name=s1 only_toplevel=false 
 value="
-.op
-.save all
+.control
+ac dec 20 1 1e12
+save all
+write test_ac.raw
+.endc
 "}
-C {sky130_fd_pr/corner.sym} 180 -230 0 0 {name=CORNER only_toplevel=false corner=tt}
-C {devices/vsource.sym} -320 -60 0 0 {name=VDD value=1.8 savecurrent=false}
-C {devices/vsource.sym} -320 80 0 0 {name=VCM value=0.9 savecurrent=false}
-C {devices/gnd.sym} -320 110 0 0 {name=l3 lab=GND}
-C {devices/vdd.sym} -320 -90 0 0 {name=l4 lab=VDD}
-C {devices/gnd.sym} -320 -30 0 0 {name=l5 lab=GND}
-C {devices/vdd.sym} -320 50 0 0 {name=l6 lab=VCM
+C {sky130_fd_pr/corner.sym} -180 -210 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {devices/vsource.sym} -250 -20 0 0 {name=VDD value=1.8 savecurrent=false}
+C {devices/vsource.sym} -250 120 0 0 {name=VCM value=0.9 savecurrent=false}
+C {devices/gnd.sym} -250 150 0 0 {name=l3 lab=GND}
+C {devices/vdd.sym} -250 -50 0 0 {name=l4 lab=VDD}
+C {devices/gnd.sym} -250 10 0 0 {name=l5 lab=GND}
+C {devices/vdd.sym} -250 90 0 0 {name=l6 lab=VCM
 }
-C {devices/vdd.sym} 240 -50 0 0 {name=l8 lab=VDD}
-C {devices/vdd.sym} -80 -30 0 0 {name=l9 lab=VCM
+C {devices/vdd.sym} 250 -20 0 0 {name=l8 lab=VDD}
+C {devices/vdd.sym} -90 0 0 0 {name=l9 lab=VCM
 }
-C {devices/vdd.sym} 10 -90 0 0 {name=l10 lab=VCM
+C {devices/vdd.sym} 0 -60 0 0 {name=l10 lab=VCM
 }
-C {devices/ipin.sym} 360 0 0 1 {name=p4 lab=VOUT}
-C {devices/gnd.sym} 240 70 0 0 {name=l1 lab=GND}
+C {devices/gnd.sym} 250 100 0 0 {name=l7 lab=GND}
+C {devices/vsource.sym} 50 30 0 0 {name=VDIFF 
+value="0 AC 1"
+savecurrent=false}
+C {devices/ipin.sym} 440 30 0 1 {name=p3 lab=test}

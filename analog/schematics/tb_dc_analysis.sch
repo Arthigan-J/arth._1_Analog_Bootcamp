@@ -23,12 +23,12 @@ value=1M
 footprint=1206
 device=resistor
 m=1}
-C {devices/code_shown.sym} -400 80 0 0 {name=s1 only_toplevel=false 
+C {devices/code_shown.sym} -420 80 0 0 {name=s1 only_toplevel=false 
 value="
 .dc VDIFF -10m 10m 0.1m
 .save all
 "}
-C {sky130_fd_pr/corner.sym} -420 -240 0 0 {name=CORNER only_toplevel=false corner=tt}
+C {sky130_fd_pr/corner.sym} -410 -230 0 0 {name=CORNER only_toplevel=false corner=tt}
 C {devices/vsource.sym} -490 -50 0 0 {name=VDD value=1.8 savecurrent=false}
 C {devices/vsource.sym} -490 90 0 0 {name=VCM value=0.9 savecurrent=false}
 C {devices/gnd.sym} -490 120 0 0 {name=l3 lab=GND}

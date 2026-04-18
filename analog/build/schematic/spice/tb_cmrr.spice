@@ -1,19 +1,18 @@
-** sch_path: /home/arthcodez/arth._1_Analog_Bootcamp/analog/schematics/tb_ac_analysis.sch
-**.subckt tb_ac_analysis test
+** sch_path: /home/arthcodez/arth._1_Analog_Bootcamp/analog/schematics/tb_cmrr.sch
+**.subckt tb_cmrr test
 *.ipin test
 x1 VDD test net2 net1 GND bootcamp_opamp
 R1 VCM net1 1M m=1
 R2 VCM net2 1M m=1
 VDD VDD GND 1.8
-VCM VCM GND 0.9
-VDIFF net1 net2 dc 0 ac 1
+VCM VCM GND dc 0.9 ac 1
 **** begin user architecture code
 
 
 .control
 ac dec 20 1 1e12
 save all
-write test_ac.raw
+write test_cmrr.raw
 .endc
 
 
@@ -37,9 +36,9 @@ write test_ac.raw
 *.ipin VDD
 *.ipin VSS
 *.opin VOUT
-XM1 net1 VIN_P net3 VSS sky130_fd_pr__nfet_01v8 L=0.5 W=16 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
+XM1 net1 VIN_P net3 VSS sky130_fd_pr__nfet_01v8 L=1 W=16 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
-XM2 net2 VIN_N net3 VSS sky130_fd_pr__nfet_01v8 L=0.5 W=16 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
+XM2 net2 VIN_N net3 VSS sky130_fd_pr__nfet_01v8 L=1 W=16 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1
 XM3 net1 net1 VDD VDD sky130_fd_pr__pfet_01v8 L=0.5 W=10 nf=1 ad='int((nf+1)/2) * W/nf * 0.29' as='int((nf+2)/2) * W/nf * 0.29' pd='2*int((nf+1)/2) * (W/nf + 0.29)'
 + ps='2*int((nf+2)/2) * (W/nf + 0.29)' nrd='0.29 / W' nrs='0.29 / W' sa=0 sb=0 sd=0 mult=1 m=1

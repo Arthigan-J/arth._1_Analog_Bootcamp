@@ -4,7 +4,6 @@ K {}
 V {}
 S {}
 E {}
-N 250 80 250 100 {lab=GND}
 N 120 0 120 10 {lab=#net1}
 N 120 50 120 60 {lab=#net2}
 N 420 30 440 30 {lab=test}
@@ -44,8 +43,8 @@ C {devices/vdd.sym} -90 0 0 0 {name=l9 lab=VCM
 }
 C {devices/vdd.sym} 0 -60 0 0 {name=l10 lab=VCM
 }
-C {devices/gnd.sym} 250 100 0 0 {name=l7 lab=GND}
+C {devices/gnd.sym} 250 80 0 0 {name=l7 lab=GND}
 C {devices/vsource.sym} 50 30 0 0 {name=VDIFF 
-value="0 AC 1"
+value="dc 0 ac 1"
 savecurrent=false}
 C {devices/ipin.sym} 440 30 0 1 {name=p3 lab=test}
